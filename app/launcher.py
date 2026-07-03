@@ -82,9 +82,26 @@ class Launcher(tk.Tk):
         self.run_buttons: list[tk.Button] = []
         self.current_tool = ""
 
+        self._set_icon()
         self._build()
         self.protocol("WM_DELETE_WINDOW", self._on_close)
         self.after(50, self._drain_queue)
+
+    def _set_icon(self) -> None:
+        assets = PROJECT_ROOT / "assets"
+        ico, png = assets / "copilot-icon.ico", assets / "copilot-icon.png"
+        try:
+            if ico.exists():
+                self.iconbitmap(default=str(ico))
+                return
+        except Exception:  # noqa: BLE001
+            pass
+        try:
+            if png.exists():
+                self._icon_img = tk.PhotoImage(file=str(png))
+                self.iconphoto(True, self._icon_img)
+        except Exception:  # noqa: BLE001
+            pass
 
     def _btn(self, parent, text, command, *, base=ACCENT, hover=ACCENT_H,
              fg="#ffffff", font=(FONT, 10, "bold"), padx=12, pady=8, width=0):
