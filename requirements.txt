@@ -1,0 +1,16 @@
+# Core: run Cursor agents programmatically
+cursor-sdk
+
+# Load CURSOR_API_KEY from a local .env
+python-dotenv
+
+# Optional, per-workflow integrations (uncomment what a client needs):
+# google-api-python-client      # Gmail / Google Workspace
+# google-auth-oauthlib
+# google-auth-httplib2
+# requests                      # generic HTTP APIs
+# beautifulsoup4                # HTML scraping
+# playwright                    # browser automation
+
+# Optional: build a one-click .exe
+# pyinstaller
