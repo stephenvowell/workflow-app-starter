@@ -1,11 +1,40 @@
 # Workflow App Starter
 
-A reusable template for building **agent-backed workflow apps** for a client or
-team. Clone it, define the workflow, wire in their systems, and hand over a
-desktop app a non-coder can actually use.
+> A reusable template for shipping **agent-backed workflow apps** to a client or team.
+> Clone it, define the workflow, wire in their systems, and hand over a desktop app a
+> non-coder can actually use.
 
-Built on the [Cursor SDK](https://cursor.com/docs/sdk/python). The design rule:
-**the agent drafts, the human decides** — every step is gated by approval.
+![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white)
+![Cursor SDK](https://img.shields.io/badge/Built%20with-Cursor%20SDK-0d1528)
+![Human-in-the-loop](https://img.shields.io/badge/Design-Human--in--the--loop-4ade80)
+![Reusable template](https://img.shields.io/badge/Use-Template-3b82f6)
+
+![Workflow Copilot — the reusable launcher](assets/workflow-copilot-demo.png)
+
+*The launcher: register a client's tools as buttons; each runs in an approval-gated,
+embedded console. Swap the palette to match their brand.*
+
+## Why this exists
+
+This is the template I use to turn "what a business does by hand" into a delivered app.
+Built on the [Cursor SDK](https://cursor.com/docs/sdk/python), with one rule that keeps it
+safe for real client systems: **the agent drafts, the human decides** — every step is gated
+by approval.
+
+**Who it's for**
+
+- **Consulting / integration work** — a repeatable spine so each client engagement is
+  *fill in the workflow*, not *rebuild the plumbing*.
+- **Teams** — automate a multi-step process (report, triage, intake) while keeping a
+  human approval at each stage and an audit trail of outputs.
+
+**What it shows** — a clean separation of the reusable engine (`shared/`) from the
+per-client workflow (`app/workflow.py`), a ready-made GUI, demo mode for key-free
+walkthroughs, MCP hooks for real systems, and a client intake checklist that maps a
+business process onto the code.
+
+> Built by **Stephen Vowell** — AI-workflow automation & systems integration.
+> [github.com/stephenvowell](https://github.com/stephenvowell) · [stephenv.net](https://stephenv.net)
 
 ## What you get
 
